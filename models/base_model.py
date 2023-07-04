@@ -1,13 +1,21 @@
 #!/usr/bin/python3
+""" Module containing class BaseModel """
 import uuid
 from datetime import datetime
 
 
 class BaseModel():
-    """ Class that defines all common attributes/methods for other classes """
+    """
+    Base class for all other classes
+
+    Attributes:
+        id (str): Unique identifier for the object.
+        created_at (datetime): Date and time the object was created.
+        updated_at (datetime): Date and time the object was last updated.
+    """
     def __init__(self):
-        self.created_at = datetime.now()
         self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
     def __str__(self):
