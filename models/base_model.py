@@ -29,6 +29,6 @@ class BaseModel():
         create = self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
         copy = self.__dict__.copy()
         copy['class'] = type(self).__name__
-        copy["update_at"] = self.updated_at.isoformat()
         copy["created_at"] = self.created_at.isoformat()
+        copy["update_at"] = self.updated_at.isoformat()
         return copy
