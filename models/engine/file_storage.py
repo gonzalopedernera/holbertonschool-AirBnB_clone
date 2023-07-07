@@ -36,6 +36,8 @@ class FileStorage:
         with open(FileStorage.__file_path, mode='r') as f:
             dict = json.load(f)
             classes = {'BaseModel': BaseModel, 'User':User, 'State': State, 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review} 
+            FileStorage.__objetcs = {}
+
             for key, value in dict.items():
                 _class = key.split('.')[0]
                 if _class in classes.keys():
