@@ -21,7 +21,7 @@ class BaseModel():
                     self.id = str(value)
                 if key == 'created_at':
                     self.created_at = datetime.strptime(value, format)
-                if key == 'update_at':
+                if key == 'updated_at':
                     self.updated_at = datetime.strptime(value, format)
         else:
             self.id = str(uuid.uuid4())
@@ -38,5 +38,5 @@ class BaseModel():
         copy = self.__dict__.copy()
         copy['class'] = type(self).__name__
         copy["created_at"] = self.created_at.isoformat()
-        copy["update_at"] = self.updated_at.isoformat()
+        copy["updated_at"] = self.updated_at.isoformat()
         return copy
