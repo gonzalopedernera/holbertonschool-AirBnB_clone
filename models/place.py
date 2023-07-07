@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-from base_model import BaseModel
-from city import City
-from user import User
+from models.base_model import BaseModel
+from models.city import City
+from models.user import User
 
 class Place(BaseModel):
     """ """
