@@ -4,19 +4,18 @@ from os import path
 
 class FileStorage:
     __file_path = "file.json"
-    __objetcs = {}
+    __objects = {}
 
     def all(self):
-        return FileStorage.__objetcs
+        return FileStorage.__objects
     
     def new(self, obj):
-
-        FileStorage.__objetcs[f"{obj.__class__.__name__}.{obj.id}"] = obj
+        FileStorage.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
 
         dict = {}
-        for key, value in FileStorage.__objetcs.items():
+        for key, value in self.__objects.items():
             dict.update({key: value.to_dict()})
 
         with open(FileStorage.__file_path, mode = 'w') as f:
@@ -34,11 +33,10 @@ class FileStorage:
         if not path.exists(FileStorage.__file_path):
             return
         with open(FileStorage.__file_path, mode='r') as f:
-            dict = json.load(f)
+            instances = json.load(f)
             classes = {'BaseModel': BaseModel, 'User':User, 'State': State, 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review} 
-            FileStorage.__objetcs = {}
 
-            for key, value in dict.items():
+            for key, value in instances.items():
                 _class = key.split('.')[0]
                 if _class in classes.keys():
-                    FileStorage.__objetcs[key] = classes[_class](**value)
+                    self.__objects[key] = classes[_class](**value)
