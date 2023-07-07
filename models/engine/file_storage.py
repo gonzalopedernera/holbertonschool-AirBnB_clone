@@ -14,12 +14,12 @@ class FileStorage:
 
     def save(self):
 
-        dict = {}
+        instances = {}
         for key, value in self.__objects.items():
-            dict.update({key: value.to_dict()})
+            instances.update({key: value.to_dict()})
 
         with open(FileStorage.__file_path, mode = 'w') as f:
-            json.dump(dict, f)
+            json.dump(instances, f)
 
     def reload(self):
         from models.base_model import BaseModel
