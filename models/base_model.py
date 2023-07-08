@@ -45,7 +45,7 @@ class BaseModel():
         """ dictionary representation """
 
         copy = self.__dict__.copy()
-        copy['class'] = type(self).__name__
+        copy['__class__'] = type(self).__name__
         copy["created_at"] = self.created_at.isoformat()
         copy["updated_at"] = self.updated_at.isoformat()
         return copy
