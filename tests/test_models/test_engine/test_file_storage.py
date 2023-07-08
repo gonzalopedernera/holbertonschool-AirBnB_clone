@@ -92,7 +92,7 @@ class Test_File_Storage(unittest.TestCase):
         test6 = State()
         key_6 = 'State' + '.' + test6.id
         storage.save()
-        self.assertTrue(path.isfile('storage.json'))
+        self.assertTrue(path.isfile('file.json'))
         FileStorage._FileStorage__objects = {}
         storage.reload()
         self.assertTrue(key in storage.all().keys())

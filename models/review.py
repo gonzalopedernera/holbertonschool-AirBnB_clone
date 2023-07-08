@@ -6,5 +6,5 @@ class Review(BaseModel):
     """ class Review """
 
     place_id = ""
-    user_ir = ""
-    texr = ""
+    user_id = ""
+    text = ""

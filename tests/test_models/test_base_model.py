@@ -79,7 +79,7 @@ class Test_BaseModel(unittest.TestCase):
         """ Test save method """
         base = BaseModel()
         base.save()
-        with open("storage.json", "r") as f:
+        with open("file.json", "r") as f:
             self.assertIn("BaseModel." + base.id, f.read())
 
     def test_thetime(self):
