@@ -6,14 +6,16 @@ from datetime import datetime
 
 class BaseModel():
     """
-    Base class for all other classes
+    Base class
 
     Attributes:
-        id (str): Unique identifier for the object.
+        id (str): identifier for the object.
         created_at (datetime): Date and time the object was created.
         updated_at (datetime): Date and time the object was last updated.
     """
     def __init__(self, *args, **kwargs):
+        """ comments """
+
         format = "%Y-%m-%dT%H:%M:%S.%f"
         if len(kwargs) > 0:
             for key, value in kwargs.items():
@@ -29,12 +31,17 @@ class BaseModel():
             self.updated_at = datetime.now()
 
     def __str__(self):
+        """ string representation """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
+        """ save """
+
         self.updated_at = datetime.now()
 
     def to_dict(self):
+        """ dictionary representation """
+
         copy = self.__dict__.copy()
         copy['class'] = type(self).__name__
         copy["created_at"] = self.created_at.isoformat()
