@@ -91,11 +91,13 @@ class HBNBCommand(cmd.Cmd):
             obj_key = arg_list[0] + '.' + arg_list[1]
             if obj_key in storage.all().keys():
                 del (storage.all()[obj_key])
+                storage.save()
             else:
                 print("** no instance found **")
                 return
 
     def do_all(self, arg):
+        obj_list = []
         """Prints all the instances from the class name recieved as prompt"""
         if arg:
             if arg not in HBNBCommand.classes:
@@ -105,12 +107,14 @@ class HBNBCommand(cmd.Cmd):
             else:
                 for key, value in storage.all().items():
                     if value.__class__.__name__ == arg:
-                        print(f"{value}", end="")
-                print()
+                        obj_list.append(f"{value}")
+                if obj_list != []:
+                    print(obj_list)
         else:
             for key, value in storage.all().items():
-                print(f"{value}", end="")
-            print()
+                obj_list.append(f"{value}")
+            if obj_list != []:
+                print(obj_list)
 
     def do_update(self, args):
         """Updates an object and saves the changes to the JSON file
@@ -143,11 +147,15 @@ class HBNBCommand(cmd.Cmd):
                 all_obj = storage.all()
                 if obj_key in all_obj.keys():
                     obj = all_obj[obj_key]
-                    obj.__dict__[arg_list[2]] = arg_list[3]
+                    if arg_list[3].startswith('"'):
+                        obj.__dict__[arg_list[2]] = arg_list[3][1:-1]
+                    else:
+                        obj.__dict__[arg_list[2]] = arg_list[3]
                     storage.save()
                 else:
                     print("** no instance found **")
                     return
 
 
-HBNBCommand().cmdloop()
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
