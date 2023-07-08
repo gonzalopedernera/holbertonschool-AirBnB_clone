@@ -73,7 +73,7 @@ cd holbertonschool-AirBnB_clone
 #### How the console works
  * The console will display a prompt, and then wait for a command.
  * The 'help' command will display a list of all avaliable commands. Use 'help + \<command>' to get a description of the specified command.
- ![Console Help](https://raw.githubusercontent.com/gonzalopedernera/imagenexd/main/ezgif.com-video-to-gif.gif?token=GHSAT0AAAAAACEHYAC6K4J5F5H4E5UPESQUZFJZPMA)
+ ![Console Help](https://imgur.com/a/CVq7OLR)
  ![Console Empty file](https://raw.githubusercontent.com/gonzalopedernera/imagenexd/main/ezgif-5-21063b2811.gif?token=GHSAT0AAAAAACEHYAC76GBEGXIRRP2MZ3QOZFJZZ7Q)
  ![enter image description here](https://raw.githubusercontent.com/gonzalopedernera/imagenexd/main/ezgif.com-video-to-gif%20%281%29.gif?token=GHSAT0AAAAAACEHYAC7UARAPG4QO37OIRFSZFJZ4ZQ)
  ### Runing testfiles
