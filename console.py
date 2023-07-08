@@ -97,8 +97,8 @@ class HBNBCommand(cmd.Cmd):
                 return
 
     def do_all(self, arg):
-        obj_list = []
         """Prints all the instances from the class name recieved as prompt"""
+        obj_list = []
         if arg:
             if arg not in HBNBCommand.classes:
                 print("** class doesn't exist **")
