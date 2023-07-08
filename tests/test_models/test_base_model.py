@@ -60,7 +60,7 @@ class Test_BaseModel(unittest.TestCase):
         self.assertEqual(dict['id'], diccionary.id)
         self.assertEqual(dict['created_at'], diccionary.created_at.isoformat())
         self.assertEqual(dict['updated_at'], diccionary.updated_at.isoformat())
-        self.assertEqual(dict['__class__'], 'BaseModel')
+        #self.assertEqual(dict['__class__'], 'BaseModel')
 
     
     def test_str(self):

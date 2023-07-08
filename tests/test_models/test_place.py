@@ -31,7 +31,7 @@ class Test_place(unittest.TestCase):
         self.assertEqual(new_class.price_by_night, 0)
         self.assertEqual(new_class.latitude, 0.0)
         self.assertEqual(new_class.longitude, 0.0)
-        self.assertEqual(new_class.amenity_ids, "")
+        self.assertEqual(new_class.amenity_ids, [])
 
 
 if __name__ == '__main__':
