@@ -73,9 +73,9 @@ cd holbertonschool-AirBnB_clone
 #### How the console works
  * The console will display a prompt, and then wait for a command.
  * The 'help' command will display a list of all avaliable commands. Use 'help + \<command>' to get a description of the specified command.
- ![Console Help](https://imgur.com/a/CVq7OLR)
- ![Console Empty file](https://raw.githubusercontent.com/gonzalopedernera/imagenexd/main/ezgif-5-21063b2811.gif?token=GHSAT0AAAAAACEHYAC76GBEGXIRRP2MZ3QOZFJZZ7Q)
- ![enter image description here](https://raw.githubusercontent.com/gonzalopedernera/imagenexd/main/ezgif.com-video-to-gif%20%281%29.gif?token=GHSAT0AAAAAACEHYAC7UARAPG4QO37OIRFSZFJZ4ZQ)
+ ![Console Help](https://i.imgur.com/fjLXHUP.gif)
+ ![Console Empty file](https://i.imgur.com/wxQ8Ap7.gif)
+ ![objects](https://i.imgur.com/1TZcPsu.gif)
  ### Runing testfiles
 To run tests for the project, just run the following command on the root of the repository:
 ```bash
