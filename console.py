@@ -27,11 +27,19 @@ class HBNBCommand(cmd.Cmd):
             }
 
     def do_quit(self, arg):
-        """Quits the program with prompt 'quit'"""
+        """Quit command to exit the program
+
+        """
         return True
+    
+    def emptyline(self):
+        """
+        Method to pass when emptyline entered
+        """
+        pass
 
     def do_EOF(self, arg):
-        """Quits the program with prompt 'EOF'(ctrl + D)"""
+        """ Quits the program with prompt 'EOF'(ctrl + D)"""
         return True
 
     def do_help(self, arg):
