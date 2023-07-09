@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
 
         """
         return True
-    
+
     def emptyline(self):
         """
         Method to pass when emptyline entered
