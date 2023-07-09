@@ -1,14 +1,21 @@
 #!/usr/bin/python3
+""" Module containing class FileStorage """
 import json
 from os import path
 
+
 class FileStorage:
+    """
+    Serialize instances to a JSON file
+    and deserialize JSON file to instances
+    """
+
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
         return FileStorage.__objects
-    
+
     def new(self, obj):
         FileStorage.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
@@ -18,7 +25,7 @@ class FileStorage:
         for key, value in self.__objects.items():
             instances.update({key: value.to_dict()})
 
-        with open(FileStorage.__file_path, mode = 'w') as f:
+        with open(FileStorage.__file_path, mode='w') as f:
             json.dump(instances, f)
 
     def reload(self):
@@ -34,7 +41,9 @@ class FileStorage:
             return
         with open(FileStorage.__file_path, mode='r') as f:
             instances = json.load(f)
-            classes = {'BaseModel': BaseModel, 'User':User, 'State': State, 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review} 
+            classes = {'BaseModel': BaseModel, 'User': User, 'State': State,
+                       'City': City, 'Amenity': Amenity,
+                       'Place': Place, 'Review': Review}
 
             for key, value in instances.items():
                 _class = key.split('.')[0]

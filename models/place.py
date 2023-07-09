@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
+""" class Place """
 from models.base_model import BaseModel
 from models.city import City
 from models.user import User
+
 
 class Place(BaseModel):
     """ """

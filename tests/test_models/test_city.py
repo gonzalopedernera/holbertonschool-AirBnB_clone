@@ -1,4 +1,4 @@
-#usr/bin/python3
+#!usr/bin/python3
 """ Test for city class """
 from models.city import City
 import unittest
