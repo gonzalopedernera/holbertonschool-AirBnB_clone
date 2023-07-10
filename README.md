@@ -18,8 +18,6 @@ The purpose of this project is that us students are able to apply all the knowle
 -   An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them).
 
 ## Resources
-
-## Resources
 * [Python's cmd module](https://docs.python.org/3.4/library/cmd.html)
 * *Holberton's Pyhton Packages concept page*
 * [Python's uuid module](https://docs.python.org/3.4/library/uuid.html)
