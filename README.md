@@ -4,7 +4,7 @@ This repository contains **Holberton School's** AirBnB clone project, which is t
 ## Table of contents
 * [About](#about)
 * [Resources](#resources)
-* [Project requirements](#project_requirements)
+* [Project requirements](#project)
 * [Files](#files)
 * [Usage](#usage)
 * [Authors](#authors)
